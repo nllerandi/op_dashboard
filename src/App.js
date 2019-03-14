@@ -13,9 +13,10 @@ class App extends Component {
   render() {
     
     if (process.env.NODE_ENV === 'production') {
+      console.log('production', process.env.NODE_ENV)
       return 'production env'
     } else {
-      console.log(process.env.NODE_ENV)
+      console.log('development', process.env.NODE_ENV)
       setAuthHeaderDev()
     }
 
